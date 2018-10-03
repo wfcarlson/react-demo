@@ -14,6 +14,7 @@ pipeline {
 
         stage('deploy') {
             steps {
+                sh 'aws configure set region us-east-1'
                 sh 'aws ecr get-login --no-include-email | source /dev/stdin'
                 sh 'docker tag react 090999229429.dkr.ecr.us-east-1.amazonaws.com/jenkins-demo'
                 sh 'docker push 090999229429.dkr.ecr.us-east-1.amazonaws.com/jenkins-demo'

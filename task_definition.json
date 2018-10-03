@@ -1,0 +1,19 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "react-demo",
+      "image": "090999229429.dkr.ecr.us-east-1.amazonaws.com/jenkins-demo:12346",
+      "portMappings": [
+        { 
+          "hostPort": 80,
+          "containerPort": 80,
+          "protocol": "http"
+        }
+        ],
+      "memory": 200,
+      "cpu": 10,
+      "essential": true
+    }
+  ],
+  "family": "jenkins-demo"
+}
